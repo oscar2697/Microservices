@@ -5,6 +5,7 @@ import CommentList from "./CommentList"
 
 const PostList = () => {
     const [posts, setPost] = useState({})
+    
     const fetchPosts = async () => {
         const res =  await axios.get('http://localhost:4000/posts')
         setPost(res.data)
@@ -14,7 +15,7 @@ const PostList = () => {
         fetchPosts()
     }, [])
 
-    const renderedPost = Object.values(posts).map(post => {
+    const renderedPost = Object.values(posts).map((post) => {
         return (
             <div 
                 className="card" 

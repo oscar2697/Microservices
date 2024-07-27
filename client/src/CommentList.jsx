@@ -14,7 +14,7 @@ const CommentList = ({ postId }) => {
         fetchData()
     }, [])
 
-    const renderedComment = comments.map(comment => {
+    const renderedComment = comments.map((comment) => {
         return (
             <li key={comment.id}>{comment.content} </li>
         )
